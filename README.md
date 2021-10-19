@@ -1,3 +1,3 @@
 # OneProxy
 
-examply.ipynb
+Details are in examply.ipynb
