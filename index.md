@@ -6,6 +6,8 @@ search spaces, including MobileNet-V2, MobileNet-V3, NAS-Bench-201, ProxylessNAS
 highlight that, by using just one proxy device, we can find almost the same Pareto-optimal architectures as
 the existing per-device NAS, while avoiding the prohibitive cost of building a latency predictor for each target device.
 
+![Image](images/framework.pdf)
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -25,7 +27,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](url) and ![Image](images/framework.pdf)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
