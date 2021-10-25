@@ -10,6 +10,6 @@ UC Riverside, George Mason University, University of Notre Dame
 
 In Sigmetrics 2022
 
-![flexible](./images/framework.pdf)
+![framework](https://github.com/Ren-Research/OneProxy/blob/main/images/framework.pdf)
 
 Anycost GAN generates consistent outputs under various computational budgets.
