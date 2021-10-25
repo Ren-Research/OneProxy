@@ -1,6 +1,6 @@
 # One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search
 
-### [video](https://youtu.be) | [paper](https://arxiv.org) | [website](https://github.com/Ren-Research/OneProxy) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ren-Research/OneProxy/blob/main/example.ipynb)
+### [video](https://youtu.be) | [paper](https://arxiv.org) | [website](https://ren-research.github.io/OneProxy/) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ren-Research/OneProxy/blob/main/example.ipynb)
 
 [One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search](https://arxiv.org/)
 
