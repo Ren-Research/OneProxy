@@ -29,6 +29,11 @@ In Sigmetrics 2022
 Left: NAS without a supernet. Right: One-shot NAS with a supernet.
 
 
+![nas_comparison](./images/nas_comparison.jpg)
+
+Cost Comparison of Hardware-aware NAS Algorithms for 𝑛 Target Devices.
+
+
 ## Using one proxy device for hardware-aware NAS
 
 ![flowchart](./images/flowchart.jpg)
