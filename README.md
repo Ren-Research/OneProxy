@@ -25,3 +25,7 @@ Overview of using one proxy device for hardware-aware NAS.
 
 ## Latency Monotonicity in the Real World
 
+![heatmap](./images/heatmap1.jpg)
+
+SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile devices.
+
