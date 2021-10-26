@@ -29,3 +29,10 @@ Overview of using one proxy device for hardware-aware NAS.
 
 SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile devices.
 
+
+### AdaProxy
+
+![ea_models](./images/ea_models.jpg)
+
+![exhaustive_models](./images/exhaustive_models.jpg)
+
