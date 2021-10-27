@@ -73,7 +73,7 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 ![flowchart](./images/flowchart.jpg)
 
 
-### AdaProxy for NAS performance
+### One proxy for hardware-aware NAS
 
 ![ea_models](./images/ea_models.jpg)
 
