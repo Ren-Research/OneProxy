@@ -1,41 +1,57 @@
-## One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search
+# One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search
 
-Convolutional neural networks (CNNs) are used in numerous real-world applications such as vision-based
-autonomous driving and video content analysis. To run CNN inference on various target devices, hardware- aware neural architecture search (NAS) is crucial. A key requirement of efficient hardware-aware NAS is the fast evaluation of inference latencies in order to rank different architectures. While building a latency predictor for each target device has been commonly used in state of the art, this is a very time-consuming process, lacking scalability in the presence of extremely diverse devices. In this work, we address the scalability challenge by exploiting latency monotonicity — the architecture latency rankings on different devices are often correlated. When strong latency monotonicity exists, we can re-use architectures searched for one proxy device on new target devices, without losing optimality. In the absence of strong latency monotonicity, we propose an efficient proxy adaptation technique to significantly boost the latency monotonicity. Finally, we validate our approach and conduct experiments with devices of different platforms on multiple mainstream
-search spaces, including MobileNet-V2, MobileNet-V3, NAS-Bench-201, ProxylessNAS and FBNet. Our results
-highlight that, by using just one proxy device, we can find almost the same Pareto-optimal architectures as
-the existing per-device NAS, while avoiding the prohibitive cost of building a latency predictor for each target device.
+### [video](https://youtu.be) | [paper](https://arxiv.org) | [website](https://ren-research.github.io/OneProxy/) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ren-Research/OneProxy/blob/main/example.ipynb)
 
-![Image](images/framework.pdf)
+[One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search](https://arxiv.org/)
 
-### Markdown
+Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ece.ucr.edu/~sren/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+UC Riverside, George Mason University, University of Notre Dame
 
-```markdown
-Syntax highlighted code block
+In Sigmetrics 2022
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](images/framework.pdf)
+```BibTex
+@inproceedings{
+  luOneProxy2022,
+  title={One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search},
+  author={Bingqian Lu and Jianyi Yang and Weiwen Jiang and Yiyu Shi and Shaolei Ren},
+  booktitle={ACM SIGMETRICS},
+  year={2022},
+  url={https://arxiv.org/}
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## Overview of NAS algorithms
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Ren-Research/OneProxy/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![framework](./images/sota.jpg)
 
-### Support or Contact
+Left: NAS without a supernet. Right: One-shot NAS with a supernet.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+![nas_cost_comparison](./images/nas_cost_comparison.jpg)
+
+Cost Comparison of Hardware-aware NAS Algorithms for 𝑛 Target Devices.
+
+
+## Using one proxy device for hardware-aware NAS
+
+![flowchart](./images/flowchart.jpg)
+
+
+## Using Spearman’s Rank Correlation Coefficient (SRCC) to measure latency monotonicity
+
+Latency monotonicity in the real world
+
+![heatmap](./images/heatmap1.jpg)
+SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile devices.
+
+
+## Increasing Latency Monotonicity by Adapting the Proxy Latency Predictor
+
+![ea_models](./images/ea_models.jpg)
+
+![exhaustive_models](./images/exhaustive_models.jpg)
+
+![rice_nasbench_cifar10](./images/rice_nasbench_cifar10.jpg)
+Exhaustive search results for different target devices on NAS-Bench-201 architectures (CIFAR-10 dataset). Pixel3 is the proxy.
