@@ -65,7 +65,15 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 **Kernel-level latency predictor.** Another recent latency predictor is to use a random forest to estimate the latency for each execution unit (called “kernel”) that captures different compilers and execution flows, and then sum up all the involved execution units as the latency of the entire architecture. This approach unifies different DNN frameworks, such as TensorFlow and Onnx, into a single model graph, and hence can predict latencies for models developed using different frameworks. By encoding an architecture based on the execution units, we can also transform the latency predictor into a linear one: 𝑙 = w𝑇 x where w is the vector of latencies for different execution units and x denotes the number of each execution unit included in an architecture. Thus, an “execution unit” in nn-Meter is conceptually equivalent to a searchable operator in the operator-level latency predicto.
 
 
-### Performance of =and AdaProxy
+### AdaProxy for boosting latency monotonicity
+
+
+## Using one proxy device for hardware-aware NAS
+
+![flowchart](./images/flowchart.jpg)
+
+
+### AdaProxy for NAS performance
 
 ![ea_models](./images/ea_models.jpg)
 
@@ -73,8 +81,3 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 
 ![rice_nasbench_cifar10](./images/rice_nasbench_cifar10.jpg)
 Exhaustive search results for different target devices on NAS-Bench-201 architectures (CIFAR-10 dataset). Pixel3 is the proxy.
-
-
-## Using one proxy device for hardware-aware NAS
-
-![flowchart](./images/flowchart.jpg)
