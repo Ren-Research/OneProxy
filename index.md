@@ -8,7 +8,7 @@ Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ec
 
 ```BibTex
 @inproceedings{
-  luOneProxy2022,
+  luOneProxy2021,
   title={One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search},
   author={Bingqian Lu and Jianyi Yang and Weiwen Jiang and Yiyu Shi and Shaolei Ren},
   journal = {Proceedings of the ACM on Measurement and Analysis of Computing Systems}, 
@@ -53,6 +53,19 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 
 
 ## In the absence of strong latency monotonicity: adapting the proxy latency predictor
+
+### SOTA latency predictors
+
+**Operator-level latency predictor.** A straightforward approach is to first profile each operator (or each layer), and then sum all the operator-level latencies as the end-to-end latency of an architecture. Specifically, given 𝐾 operators (e.g., each with a searchable kernel size and expansion ratio), we can represent each operator using one-hot encoding: 1 means the respective operator is included in an architecture, and 0 otherwise. Thus, an architecture can be represented as x ∈ {0, 1}𝐾 ∪ {1}, where the additional {1} represents the non-searchable part, e.g., fully-connected layers in CNN, of the architecture. Accordingly, the latency predictor can be written as 𝑙 = w𝑇 x, where w ∈ R𝐾+1 is the operator-level latency vector. This approach needs a few thousands of latency measurement samples (taking up a few tens of hours).
+
+
+**GCN-based latency predictor.** To better capture the graph topology of different operators, a recent study uses a graph convolutionary network (GCN) to predict the inference latency for a target device. Concretely, the latency predictor can be written as 𝑙 = 𝐺𝐶𝑁 Θ (x), where Θ is the GCN parameter learnt based on latency measurement samples and x is the graph-based encoding of an architecture.
+
+
+**Kernel-level latency predictor.** Another recent latency predictor is to use a random forest to estimate the latency for each execution unit (called “kernel”) that captures different compilers and execution flows, and then sum up all the involved execution units as the latency of the entire architecture. This approach unifies different DNN frameworks, such as TensorFlow and Onnx, into a single model graph, and hence can predict latencies for models developed using different frameworks. By encoding an architecture based on the execution units, we can also transform the latency predictor into a linear one: 𝑙 = w𝑇 x where w is the vector of latencies for different execution units and x denotes the number of each execution unit included in an architecture. Thus, an “execution unit” in nn-Meter is conceptually equivalent to a searchable operator in the operator-level latency predicto.
+
+
+### Performance of =and AdaProxy
 
 ![ea_models](./images/ea_models.jpg)
 
