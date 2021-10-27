@@ -67,6 +67,14 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 
 ### AdaProxy for boosting latency monotonicity
 
+![heatmap_s5e_cross](./images/heatmap_s5e_cross.jpg)
+
+In the MobileNet-V2 space, with S5e as default proxy device
+
+![nasbench_heatmap](./images/nasbench_heatmap.jpg)
+
+Inthe NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100(middle) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
+
 
 ## Using one proxy device for hardware-aware NAS
 
