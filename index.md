@@ -38,7 +38,9 @@ Cost Comparison of Hardware-aware NAS Algorithms for 𝑛 Target Devices.
 
 We address the scalability challenge by exploiting latency monotonicity — the architecture latency rankings on different devices are often correlated. When strong latency monotonicity exists, we can re-use architectures searched for one proxy device on new target devices, without losing optimality.
 
-### Using Spearman’s Rank Correlation Coefficient (SRCC) to measure latency monotonicity
+### Using SRCC to measure latency monotonicity
+
+To quantify the degree of latency monotonicity, we use the metric of Spearman’s Rank Correlation Coefficient (SRCC), which lies between -1 and 1 and assesses statistical dependence between the rankings of two variables using a monotonic function. The greater the SRCC of CNN latencies on two devices, the better the latency monotonicity. SRCC of 0.9 to 1.0 is usually viewed as strongly dependent in terms of monotonicity.
 
 Latency monotonicity in the real world
 
