@@ -7,7 +7,7 @@
 Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ece.ucr.edu/~sren/), Proceedings of the ACM on Measurement and Analysis of Computing Systems, vol. 5, no. 3, Dec, 2021. (**SIGMETRICS 2022**)
 
 ```BibTex
-@inproceedings{
+@article{
   luOneProxy2021,
   title={One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search},
   author={Bingqian Lu and Jianyi Yang and Weiwen Jiang and Yiyu Shi and Shaolei Ren},
