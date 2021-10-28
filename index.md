@@ -69,9 +69,11 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 
 Even though two devices have weak latency monotonicity, it does not mean that their latencies for each searchable operator are uncorrelated; instead, for most operators, their latencies can still be roughly proportional. The reason is that a more complex operator with higher FLOPs that is slower (say, 2x slower than a reference operator) on one device is generally also slower on another device, although there may be some differences in the slow-down factor (say, 2x vs. 1.9x). This is also the reason why some NAS algorithms use the device-agnostic metric of architecture FLOPs as a rough approximation of the actual inference latency. If we view proxy adaptation as a new learning task, this task is highly correlated with the task of building the proxy device’s latency predictor, and such correlation can greatly facilitate transfer learning. We exploit the correlation among devices and propose efficient transfer learning to boost the otherwise possibly weak latency monotonicity for a target device.
 
-![heatmap_s5e_cross](./images/heatmap_s5e_cross.jpg)
-
+<p align="center">
+  <img src="./images/heatmap_s5e_cross.jpg">
+</p>
 In the MobileNet-V2 space, with S5e as default proxy device
+
 
 ![nasbench_heatmap](./images/nasbench_heatmap.jpg)
 
@@ -81,8 +83,9 @@ In the NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100 (middle) and Ima
 
 In the FBNet search spaces on CIFAR-100 (left) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
 
-![heatmap_rice_eagle](./images/heatmap_rice_eagle.jpg)
-
+<p align="center">
+  <img src="./images/heatmap_rice_eagle.jpg">
+</p>
 SRCC for various devices in the NAS-Bench-201 search space with latencies collected from [19, 29, 49, 50]
 
 
