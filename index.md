@@ -105,6 +105,8 @@ SRCC for various devices in the NAS-Bench-201 search space with latencies collec
 
 ![exhaustive_models](./images/exhaustive_models.jpg)
 
+Results for non-mobile target devices with the default S5e proxy and AdaProxy. The top row shows the evolutionary search results with real measured accuracies, and the bottom row shows the exhaustive search results based on 10k random architectures (in the MobileNet-V2 space) and predicted accuracies.
+
 ![rice_nasbench_cifar10](./images/rice_nasbench_cifar10.jpg)
 
 Exhaustive search results for different target devices on NAS-Bench-201 architectures (CIFAR-10 dataset). Pixel3 is the proxy.
