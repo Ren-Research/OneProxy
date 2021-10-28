@@ -46,10 +46,11 @@ We address the scalability challenge by exploiting latency monotonicity — the 
 
 To quantify the degree of latency monotonicity, we use the metric of Spearman’s Rank Correlation Coefficient (SRCC), which lies between -1 and 1 and assesses statistical dependence between the rankings of two variables using a monotonic function. The greater the SRCC of CNN latencies on two devices, the better the latency monotonicity. SRCC of 0.9 to 1.0 is usually viewed as strongly dependent in terms of monotonicity.
 
-Latency monotonicity in the real world
+We empirically show the existence of strong latency monotonicity among devices of the same platform, including mobile, FPGA, desktop GPU and CPU.
 
 ![heatmap](./images/heatmap1.jpg)
-SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile devices.
+
+SRCC of 10k sampled models latencies in MobileNet-V2 space on different pairs of mobile and non-mobile devices.
 
 
 ## In the absence of strong latency monotonicity: adapting the proxy latency predictor
@@ -72,6 +73,7 @@ Even though two devices have weak latency monotonicity, it does not mean that th
 <p align="center">
   <img src="./images/heatmap_s5e_cross.jpg">
 </p>
+
 In the MobileNet-V2 space, with S5e as default proxy device
 
 
@@ -79,13 +81,16 @@ In the MobileNet-V2 space, with S5e as default proxy device
 
 In the NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100 (middle) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
 
+
 ![nasbench_heatmap](./images/nasbench_heatmap.jpg)
 
 In the FBNet search spaces on CIFAR-100 (left) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
 
+
 <p align="center">
   <img src="./images/heatmap_rice_eagle.jpg">
 </p>
+
 SRCC for various devices in the NAS-Bench-201 search space with latencies collected from [19, 29, 49, 50]
 
 
@@ -101,6 +106,7 @@ SRCC for various devices in the NAS-Bench-201 search space with latencies collec
 ![exhaustive_models](./images/exhaustive_models.jpg)
 
 ![rice_nasbench_cifar10](./images/rice_nasbench_cifar10.jpg)
+
 Exhaustive search results for different target devices on NAS-Bench-201 architectures (CIFAR-10 dataset). Pixel3 is the proxy.
 
 
