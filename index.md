@@ -4,7 +4,7 @@
 
 [One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search](https://arxiv.org/)
 
-Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ece.ucr.edu/~sren/), **Proceedings of the ACM on Measurement and Analysis of Computing Systems, vol. 5, no. 3, Dec, 2021** (to be presented at the ACM SIGMETRICS 2022)
+Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ece.ucr.edu/~sren/), Proceedings of the ACM on Measurement and Analysis of Computing Systems, vol. 5, no. 3, Dec, 2021. (**SIGMETRICS 2022**)
 
 ```BibTex
 @inproceedings{
