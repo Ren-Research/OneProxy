@@ -62,10 +62,12 @@ SRCC of 10k sampled model latencies on different pairs of mobile and non-mobile 
 **GCN-based latency predictor.** To better capture the graph topology of different operators, a recent study uses a graph convolutionary network (GCN) to predict the inference latency for a target device. Concretely, the latency predictor can be written as 𝑙 = 𝐺𝐶𝑁 Θ (x), where Θ is the GCN parameter learnt based on latency measurement samples and x is the graph-based encoding of an architecture.
 
 
-**Kernel-level latency predictor.** Another recent latency predictor is to use a random forest to estimate the latency for each execution unit (called “kernel”) that captures different compilers and execution flows, and then sum up all the involved execution units as the latency of the entire architecture. This approach unifies different DNN frameworks, such as TensorFlow and Onnx, into a single model graph, and hence can predict latencies for models developed using different frameworks. By encoding an architecture based on the execution units, we can also transform the latency predictor into a linear one: 𝑙 = w𝑇 x where w is the vector of latencies for different execution units and x denotes the number of each execution unit included in an architecture. Thus, an “execution unit” in nn-Meter is conceptually equivalent to a searchable operator in the operator-level latency predicto.
+**Kernel-level latency predictor.** Another recent latency predictor is to use a random forest to estimate the latency for each execution unit (called “kernel”) that captures different compilers and execution flows, and then sum up all the involved execution units as the latency of the entire architecture. This approach unifies different DNN frameworks, such as TensorFlow and Onnx, into a single model graph, and hence can predict latencies for models developed using different frameworks. By encoding an architecture based on the execution units, we can also transform the latency predictor into a linear one: 𝑙 = w𝑇 x where w is the vector of latencies for different execution units and x denotes the number of each execution unit included in an architecture. Thus, an “execution unit” in nn-Meter is conceptually equivalent to a searchable operator in the operator-level latency predictor.
 
 
 ### AdaProxy for boosting latency monotonicity
+
+Even though two devices have weak latency monotonicity, it does not mean that their latencies for each searchable operator are uncorrelated; instead, for most operators, their latencies can still be roughly proportional. The reason is that a more complex operator with higher FLOPs that is slower (say, 2x slower than a reference operator) on one device is generally also slower on another device, although there may be some differences in the slow-down factor (say, 2x vs. 1.9x). This is also the reason why some NAS algorithms use the device-agnostic metric of architecture FLOPs as a rough approximation of the actual inference latency. If we view proxy adaptation as a new learning task, this task is highly correlated with the task of building the proxy device’s latency predictor, and such correlation can greatly facilitate transfer learning. We exploit the correlation among devices and propose efficient transfer learning to boost the otherwise possibly weak latency monotonicity for a target device.
 
 ![heatmap_s5e_cross](./images/heatmap_s5e_cross.jpg)
 
@@ -73,7 +75,11 @@ In the MobileNet-V2 space, with S5e as default proxy device
 
 ![nasbench_heatmap](./images/nasbench_heatmap.jpg)
 
-Inthe NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100(middle) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
+In the NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100 (middle) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
+
+![nasbench_heatmap](./images/nasbench_heatmap.jpg)
+
+In the FBNet search spaces on CIFAR-100 (left) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
 
 
 ## Using one proxy device for hardware-aware NAS
