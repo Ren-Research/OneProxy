@@ -111,3 +111,9 @@ Exhaustive search results for different target devices on NAS-Bench-201 architec
 
 
 ## Public latency datasets used in this work
+
+[HW-NAS-Bench: Hardware-Aware Neural Architecture Search Benchmark](https://github.com/RICE-EIC/HW-NAS-Bench)
+
+[Eagle: Efficient and Agile Performance Estimator and Dataset](https://github.com/zheng-ningxin/brp-nas)
+
+[nn-Meter: towards accurate latency prediction of deep-learning model inference on diverse edge devices](https://github.com/microsoft/nn-Meter)
