@@ -73,7 +73,11 @@ In the MobileNet-V2 space, with S5e as default proxy device
 
 ![nasbench_heatmap](./images/nasbench_heatmap.jpg)
 
-Inthe NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100(middle) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
+In the NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100 (middle) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
+
+![nasbench_heatmap](./images/nasbench_heatmap.jpg)
+
+In the FBNet search spaces on CIFAR-100 (left) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
 
 
 ## Using one proxy device for hardware-aware NAS
