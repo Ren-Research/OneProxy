@@ -26,7 +26,7 @@ Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ec
 CNNs are used in numerous real-world applications such as vision-based autonomous driving and video content analysis. To run CNN inference on various target devices, hardware-aware neural architecture search (NAS) is crucial. A key requirement of efficient hardware-aware NAS is the fast evaluation of inference latencies in order to rank different architectures. While building a latency predictor for each target device has been commonly used in state of the art, this is a very time-consuming process, lacking scalability in the presence of extremely diverse devices.
 
 
-## Overview of SOTA NAS algorithms
+### Overview of SOTA NAS algorithms
 
 ![framework](./images/sota.jpg)
 
@@ -102,3 +102,6 @@ SRCC for various devices in the NAS-Bench-201 search space with latencies collec
 
 ![rice_nasbench_cifar10](./images/rice_nasbench_cifar10.jpg)
 Exhaustive search results for different target devices on NAS-Bench-201 architectures (CIFAR-10 dataset). Pixel3 is the proxy.
+
+
+## Public latency datasets used in this work
