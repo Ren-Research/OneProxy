@@ -117,3 +117,5 @@ Exhaustive search results for different target devices on NAS-Bench-201 architec
 [Eagle: Efficient and Agile Performance Estimator and Dataset](https://github.com/zheng-ningxin/brp-nas)
 
 [nn-Meter: towards accurate latency prediction of deep-learning model inference on diverse edge devices](https://github.com/microsoft/nn-Meter)
+
+[Once for All: Train One Network and Specialize it for Efficient Deployment](https://github.com/mit-han-lab/once-for-all)
