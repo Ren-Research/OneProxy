@@ -81,6 +81,10 @@ In the NAS-Bench-201 search space on CIFAR-10 (left), CIFAR-100 (middle) and Ima
 
 In the FBNet search spaces on CIFAR-100 (left) and ImageNet16-120 (right) datasets, with Pixel3 as our proxy device
 
+![heatmap_rice_eagle](./images/heatmap_rice_eagle.jpg)
+
+SRCC for various devices in the NAS-Bench-201 search space with latencies collected from [19, 29, 49, 50]
+
 
 ## Using one proxy device for hardware-aware NAS
 
