@@ -21,6 +21,10 @@ Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ec
 }
 ```
 
+## In a Nutshell
+
+Given **N** target devices, our **_OneProxy_** approach can keep the total neural arachitecture search cost at **O(1)**.
+
 ## Hardware-aware NAS Dilemma
 
 CNNs are used in numerous real-world applications such as vision-based autonomous driving and video content analysis. To run CNN inference on various target devices, hardware-aware neural architecture search (NAS) is crucial. A key requirement of efficient hardware-aware NAS is the fast evaluation of inference latencies in order to rank different architectures. While building a latency predictor for each target device has been commonly used in state of the art, this is a very time-consuming process, lacking scalability in the presence of extremely diverse devices.
