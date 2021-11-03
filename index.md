@@ -1,6 +1,6 @@
 # One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search
 
-### [video](https://youtu.be) | [paper](https://arxiv.org/abs/2111.01203) | [website](https://ren-research.github.io/OneProxy/) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ren-Research/OneProxy/blob/main/example.ipynb)
+### [paper](https://arxiv.org/abs/2111.01203) | [website](https://ren-research.github.io/OneProxy/) [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Ren-Research/OneProxy/blob/main/example.ipynb)
 
 [One Proxy Device Is Enough for Hardware-Aware Neural Architecture Search](https://arxiv.org/abs/2111.01203)
 
@@ -23,7 +23,7 @@ Bingqian Lu, Jianyi Yang, Weiwen Jiang, Yiyu Shi, [Shaolei Ren](https://intra.ec
 
 ## In a Nutshell
 
-Given **N** target devices, our **_OneProxy_** approach can keep the total neural arachitecture search cost at **O(1)**.
+Given **N** target devices, our **_OneProxy_** approach can keep the total neural architecture search cost at **O(1)**.
 
 ## Hardware-aware NAS Dilemma
 
